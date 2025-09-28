@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { pool } from "./db.js";
-import { PacienteSchema } from "./tipos.js";
+import { pool } from "../db.js";
+import { PacienteSchema } from "../tipos.js";
 
 const r = Router();
 

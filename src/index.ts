@@ -1,9 +1,14 @@
 import express from "express";
 import cors from "cors";
-import pacientesRouter from "./pacientes.router.js";
+import pacientesRouter from "./pacientes/pacientes.router.js";
 import { bootstrap } from "./db.js";
+import agenda from "./agenda/agenda.router.js";
+import admin from "./administracion/admin.router.js";
 
 const app = express();
+app.use("/agenda", agenda);
+app.use("/admin", admin);
+
 app.use(cors({ origin: "http://localhost:5173" })); // front vite
 app.use(express.json());
 
